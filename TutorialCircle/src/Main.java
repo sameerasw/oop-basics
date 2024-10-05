@@ -4,7 +4,6 @@ public class Main {
         Circle c = new Circle();
         System.out.println("The circle has radius of " + c.getRadius() + " and area of " + c.getArea());
 
-
         Circle c2 = new Circle(8.0);
         System.out.println("The circle has radius of " + c2.getRadius() + " and area of " + c2.getArea());
 
