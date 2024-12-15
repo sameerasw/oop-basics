@@ -12,8 +12,7 @@ public class Main {
         Configuration config = CommandLineInterface.configureSystem();
         config.saveToFile("./resources/config.json");
         TicketPool ticketPool = new TicketPool();
-        Thread vendor = new Thread(new Vendor(ticketPool,
-                config.getTicketReleaseRate()));
+        Thread vendor = new Thread(new Vendor(ticketPool, config.getTicketReleaseRate()));
         Thread customer = new Thread(new Customer(ticketPool));
         vendor.start();
         customer.start();
